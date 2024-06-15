@@ -1,7 +1,7 @@
 import { io } from 'socket.io-client'
 import { useEffect, useMemo, useState } from 'react'
 const App = () => {
-  const socket = useMemo(() => io('http://localhost:3000'), [])
+  const socket = useMemo(() => io('https://websockets-3g5u.onrender.com'), [])
   const [socketId, setSocketId] = useState("");
   const [messages, setMessages] = useState([]);
   const [room, setRoom] = useState("");
