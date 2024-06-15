@@ -20,11 +20,12 @@ const App = () => {
   const handlesubmit = (e) => {
     e.preventDefault();
     socket.emit('message', message);
-
+    alert('message successfully sent')
   }
   const roomSubmit = (e) => {
     e.preventDefault();
     socket.emit('create-room', room);
+    alert('room successfully joined')
   }
 
   useEffect(() => {
