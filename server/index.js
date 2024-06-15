@@ -10,14 +10,14 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: 'http://localhost:5173', // Allowed origin
+        origin: ['http://localhost:5173', 'https://websockets-vert.vercel.app'],// Allowed origin
         methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
         credentials: true,
     },
 });
 const port = process.env.PORT || 4000;
 
-const allowedOrigins = ['http://localhost:5173'];
+const allowedOrigins = ['http://localhost:5173', 'https://websockets-vert.vercel.app'];
 
 app.use(
     cors({
